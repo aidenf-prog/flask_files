@@ -1,0 +1,25 @@
+h1{
+    font-size: 40px;
+    color:rgb(36, 113, 168);
+    text-align: center; 
+
+}
+.infiniteCraftImg
+{
+    width: 150px;
+    height: 250px;
+    margin-top:-100px;
+    margin-left: 250px;
+}
+
+a{
+    text-decoration: none; 
+    color: rgb(64, 92, 131); 
+}
+ 
+body{
+    background-color:rgb(176, 207, 230);
+}
+
+
+

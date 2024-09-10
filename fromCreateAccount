@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Account</title>
+    <script src="../Forms/createAnAccount.js" defer></script>
+    <link rel="stylesheet" href="../Static/homePage.css">
+    <link rel="stylesheet" href="../Static/CreateAnAccount.css">
+
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var errorMessage = document.getElementById("error-message");
+        
+            if (username.trim() === "" || password.trim() === "") {
+                errorMessage.style.display = "block";
+                return false;
+            } else {
+                errorMessage.style.display = "none";
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="accountForm">
+        <form class="createAccountForm" method="POST" action="/neilFun" onsubmit="return validateForm();">
+            <div class="inputContainer usernameContainer">
+                <div class="usernameInputLabel">
+                    <label for="username" class="usernameLabel">Username:</label><br><br>
+                </div>
+                <div class="usernameInputBar">
+                    <input type="text" class="usernameBar" name="username" id="username"><br><br>
+                </div>
+            </div>
+            <div class="inputContainer passwordContainer">
+                <div class="passwordInputLabel">
+                    <label for="password">Password:</label><br>
+                </div>
+                <div class="passwordInputBar">
+                    <input type="password" class="passwordBar" name="password" id="password"><br><br>
+                </div>
+            </div>
+            <div class="message">
+                <div class="error" id="error-message" style="display:none;">Username and password cannot be empty.</div>
+            </div>
+            <div class="submitButton">
+                <button type="submit" class="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
